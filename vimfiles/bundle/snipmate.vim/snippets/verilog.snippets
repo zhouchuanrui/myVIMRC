@@ -1,0 +1,150 @@
+# a verilog header 
+snippet head
+	//
+	//File: ${1:`expand('%:t')`}
+	//Device: ${2:EP2C35}
+	//Created: ${3: `strftime("%c")`}
+	//Description: ${4:blablabla}
+	//Revisions: ${5:listed below}
+	//
+# the revision details
+snippet rev
+	
+	//`strftime("%c")`: ${1:created}
+# module extract
+snippet mod
+	module ${1:name_of_module} 
+	(
+		${2:input}
+	);
+	endmodule
+# module with parameters
+snippet mp
+	module ${1:name_of_module} 
+		#(
+		//parameter declaration
+		)
+		(
+			${2:input}
+		);
+	endmodule
+# begin-end pair
+snippet beg
+	begin
+		${1:/*statements*/}
+	end
+# a wire variables declare
+snippet wire
+	wire [${2:7}:${1:0}] ${3:/*variables*/};
+# a reg variables declare 
+snippet reg
+	reg [${2:7}:${1:0}] ${3:/*variables*/};
+# ports declare
+snippet input
+	input [${2:7}:${1:0}] ${3:/*variables*/};
+# ports declare 
+snippet output
+	output [${2:7}:${1:0}] ${3:/*variables*/};
+# ports declare 
+snippet inout
+	inout [${2:7}:${1:0}] ${3:/*variables*/};
+# module inst boost
+snippet inst a autoinst snip
+	${1:name_of_module} m_$1 
+	(/*autoinst*/);
+# inst with parameters
+snippet ip
+	${1:name_of_module} #(/*autoinstparam*/)
+	m_$1 (/*autoinst*/);
+
+# else if statement
+# snippet eif
+# 	else if (${1} ${2:=}= ${3})
+# 	begin
+# 		${4:/*statements*/}
+# 	end
+# if statement
+snippet if
+	if (${1:a} ${2:=}= ${3:b})
+	begin
+		${4:/*statements*/}
+	end
+# assign statement
+snippet ass
+	assign
+		${1} = ${2};
+# always block statement
+snippet alw a combinational always block
+	always @(${1:/*autosense*/})
+	begin
+		${2:/*statements*/}
+	end
+snippet alw a clk triggered always block
+	always @(${1:pos}edge ${2:clk})
+	begin
+		${3:/*statements*/}
+	end
+snippet alw a clk triggered always block with reset signal
+	always @(${1:pos}edge ${2:clk} or ${3:neg}edge ${4:rst_n})
+	begin
+		if ($4 == ${5:1'b0})
+		begin
+			${6:/*autoreset*/}
+		end
+		else
+		begin
+			${7:/*statements*/}
+		end
+	end
+# include statement
+snippet inc
+	`include "${1:define}.v"
+# else block
+snippet else
+	else
+	begin
+		${1}
+	end
+# a temp snip 
+snippet bcd
+	else
+	begin
+		bcd_${1:second} <= bcd_$1 + 8'd1;
+	end
+# an inc snip
+snippet acc
+	${1:var} <= $1 + ${2:8}'d1;
+# state machine snip
+snippet sm
+	//state reg
+	reg [${1:7}:0] ns_$2, cs_${2:mmm};
+	//state parameters
+	localparam 
+
+	always @(posedge ${3:clk} or negedge ${4:rst_n})
+		if (!$4)
+			cs_$2 <= 0;
+		else
+			cs_$2 <= ns_$2;
+
+	always @(*)
+	begin
+		case (cs_$2)
+			${5}
+			default:
+				ns_$2 = ;
+		endcase
+	end
+# Altera Synthesis Attributes
+snippet sa full case
+	(* full_case *)
+snippet sa parallel case
+	(* parallel_case *)
+snippet sa keep
+	(* keep *)
+snippet sa preserve
+	(* preserve *)
+snippet sa noprune
+	(* noprune *)
+# end of verilog snippets
+
