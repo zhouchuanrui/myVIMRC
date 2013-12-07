@@ -21,12 +21,13 @@ snippet mod
 # module with parameters
 snippet mp
 	module ${1:name_of_module} 
-		#(
-		//parameter declaration
-		)
-		(
-			${2:input}
-		);
+	#(
+	//parameter declaration
+		parameter
+	)
+	(
+		${2:input}
+	);
 	endmodule
 # begin-end pair
 snippet beg
@@ -50,7 +51,7 @@ snippet inout
 	inout [${2:7}:${1:0}] ${3:/*variables*/};
 # module inst boost
 snippet inst a autoinst snip
-	${1:name_of_module} m_$1 
+	${1:name_of_module} m$1 
 	(/*autoinst*/);
 # inst with parameters
 snippet ip
@@ -117,7 +118,7 @@ snippet acc
 # state machine snip
 snippet sm
 	//state reg
-	reg [${1:7}:0] ns_$2, cs_${2:mmm};
+	(* syn_encoding = "safe" *)reg [${1:7}:0] ns_$2, cs_${2:mmm};
 	//state parameters
 	localparam 
 
@@ -146,5 +147,7 @@ snippet sa preserve
 	(* preserve *)
 snippet sa noprune
 	(* noprune *)
+snippet sa encoding
+	(* syn_encoding = "safe" *)
 # end of verilog snippets
 

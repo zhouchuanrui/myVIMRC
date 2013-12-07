@@ -286,7 +286,7 @@ nmap <leader>nf :NERDTreeFind<CR>
 nmap <leader>nc :NERDTreeCWD<CR>
 let g:NERDTreeShowBookmarks = 1
 let g:NERDTreeChDirMode = 2
-let NERDTreeIgnore=['\.pyc$','\.svn$','\.tmp$','\.bak$','\~$']
+let NERDTreeIgnore=['\.pyc$','\.svn$','\.tmp$','\.bak$','\.bsf$','\.stp$','\.rpt$','\.summary$','\~$']
 
 " NERDCommenter configs
 " seemed three is no need to configure
