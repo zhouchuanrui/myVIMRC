@@ -97,6 +97,9 @@ snippet alw a clk triggered always block with reset signal
 			${6:/*statements*/}
 		end
 	end
+# time scale statement
+snippet ts
+	`timescale 1ns/${1:100ps}
 # include statement
 snippet inc
 	`include "${1:define}.v"

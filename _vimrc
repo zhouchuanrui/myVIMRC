@@ -315,6 +315,11 @@ let g:snips_author = 'Mr Zhou'
 " inoremap <expr><Home>  neocomplcache#close_popup() . "\<Home>"
 " inoremap <expr><End> neocomplcache#close_popup() . "\<End>"
 
+" file type switch
+	" .vt would be a verilog testbench file
+au BufNewFile,BufRead *.vt set filetype=verilog
+	" .md or .mkd would be a markdown file
+au BufNewFile,BufRead *.md, *.mkd set filetype=markdown
 
 " the Vundle requires this line to recover
 filetype plugin indent on
