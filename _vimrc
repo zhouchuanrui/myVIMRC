@@ -200,11 +200,6 @@ inoremap " ""<Left>
 inoremap “ “”<Left>
 inoremap /* /**/<Left><Left>
 
-"******* begin-end parenthesis abbreviation
-	"use in .v files
-	"iabbrev beg beginend<Left><Left><Left><C-M><C-M><Up>
-	"use a snip instead
-
 
 "******** set mapleader
 "don't know how exactly it works, but it is seemed really popular
