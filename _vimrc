@@ -120,8 +120,8 @@ endfunction
 
 
 "********zcr configs
-colorscheme desert "choose the color theme to [desert] 
- "colorscheme zenburn 
+"colorscheme desert "choose the color theme to [desert] 
+colorscheme myscheme 
 set guifont=Consolas:h9 " set the font and font-size
 set gfw=YouYuan:h11 " set Chinese font
 ""set number  " show the line number

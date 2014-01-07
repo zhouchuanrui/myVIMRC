@@ -1,5 +1,6 @@
 tags
 *~
-*.vim
+# only ignore .vim file in this dir
+/*.vim
 vim73/
 vim74/
