@@ -88,15 +88,18 @@ snippet alw a clk triggered always block
 snippet alw a clk triggered always block with reset signal
 	always @(${1:pos}edge ${2:clk} or ${3:neg}edge ${4:rst_n})
 	begin
-		if ($4 == ${5:1'b0})
+		if (!$4)
 		begin
-			${6:/*autoreset*/}
+			${5:/*autoreset*/}
 		end
 		else
 		begin
-			${7:/*statements*/}
+			${6:/*statements*/}
 		end
 	end
+# time scale statement
+snippet ts
+	`timescale 1ns/${1:100ps}
 # include statement
 snippet inc
 	`include "${1:define}.v"
@@ -105,12 +108,6 @@ snippet else
 	else
 	begin
 		${1}
-	end
-# a temp snip 
-snippet bcd
-	else
-	begin
-		bcd_${1:second} <= bcd_$1 + 8'd1;
 	end
 # an inc snip
 snippet acc
@@ -121,7 +118,7 @@ snippet sm
 	(* syn_encoding = "safe" *)reg [${1:7}:0] ns_$2, cs_${2:mmm};
 	//state parameters
 	localparam 
-
+		${5:sIDLE = 0},
 	always @(posedge ${3:clk} or negedge ${4:rst_n})
 		if (!$4)
 			cs_$2 <= 0;
@@ -130,8 +127,9 @@ snippet sm
 
 	always @(*)
 	begin
+		ns_$2 = cs_$2;
 		case (cs_$2)
-			${5}
+			$5:
 			default:
 				ns_$2 = ;
 		endcase

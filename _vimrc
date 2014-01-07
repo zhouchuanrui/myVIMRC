@@ -120,8 +120,8 @@ endfunction
 
 
 "********zcr configs
-colorscheme desert "choose the color theme to [desert] 
- "colorscheme zenburn 
+"colorscheme desert "choose the color theme to [desert] 
+colorscheme myscheme 
 set guifont=Consolas:h9 " set the font and font-size
 set gfw=YouYuan:h11 " set Chinese font
 ""set number  " show the line number
@@ -310,6 +310,11 @@ let g:snips_author = 'Mr Zhou'
 " inoremap <expr><Home>  neocomplcache#close_popup() . "\<Home>"
 " inoremap <expr><End> neocomplcache#close_popup() . "\<End>"
 
+" file type switch
+	" .vt would be a verilog testbench file
+au BufNewFile,BufRead *.vt set filetype=verilog
+	" .md or .mkd would be a markdown file
+au BufNewFile,BufRead *.md, *.mkd set filetype=markdown
 
 " the Vundle requires this line to recover
 filetype plugin indent on
