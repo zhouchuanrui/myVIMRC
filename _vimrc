@@ -140,11 +140,6 @@ set autoread " auto read file from outside
 set nowritebackup " set backup off
 set noswapfile
 set scrolloff=3 " set 7 lines left at top/bottom when moving with j/k
-"******** set match clusters
-"------>alredy set brackets auto expanding, no need to set match any more
-"----->set showmatch 
-"----->set matchpairs=(:),{:},[:],<:>
-"----->set matchtime=5
 
 set browsedir=buffer " Make GUI File Open use current directory
 set autochdir " Always switch to the current file directory
@@ -198,7 +193,11 @@ inoremap { {}<Left>
 ""inoremap ' ''<Left>
 inoremap " ""<Left>
 inoremap “ “”<Left>
-inoremap /* /**/<Left><Left>
+"inoremap /* /**/<Left><Left>
+
+""use the real regexp
+nnoremap / /\v
+nnoremap ? ?\v
 
 
 "******** set mapleader

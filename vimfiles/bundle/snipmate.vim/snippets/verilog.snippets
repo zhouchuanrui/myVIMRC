@@ -55,8 +55,10 @@ snippet inst a autoinst snip
 	(/*autoinst*/);
 # inst with parameters
 snippet ip
-	${1:name_of_module} #(/*autoinstparam*/)
-	m_$1 (/*autoinst*/);
+	${1:name_of_module} 
+	#(/*autoinstparam*/)
+	m$1 
+	(/*autoinst*/);
 
 # else if statement
 # snippet eif
@@ -118,10 +120,10 @@ snippet sm
 	(* syn_encoding = "safe" *)reg [${1:7}:0] ns_$2, cs_${2:mmm};
 	//state parameters
 	localparam 
-		${5:sIDLE = 0},
+		${5:sIDLE} = 0,
 	always @(posedge ${3:clk} or negedge ${4:rst_n})
 		if (!$4)
-			cs_$2 <= 0;
+			cs_$2 <= $5;
 		else
 			cs_$2 <= ns_$2;
 
@@ -131,7 +133,7 @@ snippet sm
 		case (cs_$2)
 			$5:
 			default:
-				ns_$2 = ;
+				ns_$2 = $5;
 		endcase
 	end
 # Altera Synthesis Attributes

@@ -31,7 +31,7 @@ hi TabLineSel guibg=black guifg=white
 "hi Comment	guifg=#cdad00
 "hi Comment	guifg= DarkYellow
 hi Comment	guifg= #7f9f6f 
-hi Constant	guifg= #00bfff 
+hi Constant	guifg= #00bfff gui = bold
 hi Statement guifg = #b8af43
 hi Special guifg = #7f9f6f
 hi PreProc guifg = #b9663e
