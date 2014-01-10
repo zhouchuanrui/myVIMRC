@@ -135,6 +135,9 @@ set softtabstop=4
 set shiftwidth=4
 set noexpandtab
 
+" set no cursor blinking
+set gcr=a:blinkon0
+
 set autoread " auto read file from outside
 "set lazyredraw " do not redraw when running macros 
 set nowritebackup " set backup off
