@@ -136,6 +136,11 @@ snippet sm
 				ns_$2 = $5;
 		endcase
 	end
+# parameterized bit oprand
+snippet p0
+	{(${1:pWIDTH}){1'b0}};
+snippet p1
+	{{(${1:pWIDTH}-1){1'b0}}, 1'b1};
 # Altera Synthesis Attributes
 snippet sa full case
 	(* full_case *)
