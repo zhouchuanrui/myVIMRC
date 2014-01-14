@@ -25,6 +25,7 @@ hi LineNr guibg=black guifg=white
 "hi LineNr guibg=#00BFFF guifg=white 
 hi Title	guifg=red
 hi TabLineSel guibg=black guifg=white
+hi StatusLine guibg=cyan
 "hi TabLine guibg = #ccefcf
 
 " syntax highlighting groups
