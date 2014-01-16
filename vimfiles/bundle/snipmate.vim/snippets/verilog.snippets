@@ -29,11 +29,22 @@ snippet mp
 		${2:input}
 	);
 	endmodule
+# initial block
+snippet ini
+	initial
+	begin
+		${1:/*statements*/}
+	end
 # begin-end pair
 snippet beg
 	begin
 		${1:/*statements*/}
 	end
+# fork-join pair
+snippet fo
+	fork
+		${1:/*statements*/}
+	join
 # a wire variables declare
 snippet wire
 	wire [${2:7}:${1:0}] ${3:/*variables*/};

@@ -247,8 +247,10 @@ nmap <leader>w :write<CR>
 nmap <leader>h :vertical help  
 " --->end 
 
+" windows clipboard interface
 nmap <leader>a ggVG
 vmap <leader>y "+y
+nnoremap <leader>p "+p
 
 " set the format of the <c-a>,<c-x> operation
 set nrformats-=octal
