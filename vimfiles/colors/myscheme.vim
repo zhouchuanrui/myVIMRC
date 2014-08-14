@@ -27,6 +27,7 @@ hi Title	guifg=red
 hi TabLineSel guibg=black guifg=white
 hi StatusLine guibg=cyan
 "hi TabLine guibg = #ccefcf
+hi Visual guibg=yellow
 
 " syntax highlighting groups
 "hi Comment	guifg=#cdad00
