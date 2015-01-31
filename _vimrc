@@ -133,7 +133,7 @@ set go= " set no tool-bar, tool-menu or speed-bar
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
-set noexpandtab
+set expandtab
 
 " set no cursor blinking
 set gcr=a:blinkon0
@@ -318,7 +318,7 @@ let g:snips_author = 'Mr Zhou'
 	" .vt would be a verilog testbench file
 au BufNewFile,BufRead *.vt set filetype=verilog
 	" .md or .mkd would be a markdown file
-au BufNewFile,BufRead *.md, *.mkd set filetype=markdown
+au BufRead *.md set filetype=markdown
 
 " the Vundle requires this line to recover
 filetype plugin indent on
