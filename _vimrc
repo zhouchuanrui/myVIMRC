@@ -154,7 +154,7 @@ set sessionoptions=curdir,tabpages  "",resize
 let $VIMSESSION = '$VIM\Session.vim'
 autocmd VimLeave * mks! $VIMSESSION
 nmap <silent> <F4> :so $VIMSESSION<CR>
-autocmd GUIEnter * simalt ~x " maximun the window on start
+"autocmd GUIEnter * simalt ~x " maximun the window on start
 
 " ctrl+n to do the word traversal
 nmap <C-N> *
