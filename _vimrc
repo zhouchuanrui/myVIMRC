@@ -40,7 +40,7 @@ set history=100
 set ruler
 set showcmd
 set incsearch
-set nohlsearch
+set hlsearch
 set ignorecase
 set smartcase
 " for formatting
@@ -126,7 +126,7 @@ set guifont=Consolas:h9 " set the font and font-size
 set gfw=YouYuan:h11 " set Chinese font
 ""set number  " show the line number
 set relativenumber	" show the relative line number, a 7.3 new feature
-set nohls " set on high-light search
+"set nohls " set on high-light search
 set shortmess=atI  " set the message mode
 set go= " set no tool-bar, tool-menu or speed-bar
 "******** set tabwidth cluster
@@ -245,6 +245,7 @@ nmap <leader>tn :tabnew
 	" the slow stroke of ,s woudle mis-operate to 
 	" delete a char...
 nmap <leader>w :write<CR>
+nmap <c-s> :write<CR>
 
 " ",h <arg>" to vertically open the help window
 nmap <leader>h :vertical help  

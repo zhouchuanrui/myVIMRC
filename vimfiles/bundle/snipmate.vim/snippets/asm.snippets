@@ -1,0 +1,6 @@
+snippet ram
+	movf    ${1:reg}, wreg
+	movwf   $1_REG
+snippet reg
+	movf    ${1:reg}_REG, wreg
+	movwf   $1
