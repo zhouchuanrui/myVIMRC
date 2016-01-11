@@ -17,6 +17,7 @@ Bundle 'taglist.vim'
 Bundle 'scrooloose/nerdtree' 
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'msanders/snipmate.vim'
+Bundle 'minibufexpl.vim'
 "Bundle 'tomasr/molokai'
 
 " Bundle 'Shougo/neocomplcache.vim' 
@@ -317,6 +318,9 @@ let g:snips_author = 'Mr Zhou'
 " inoremap <expr><Down>  neocomplcache#close_popup() . "\<Down>"
 " inoremap <expr><Home>  neocomplcache#close_popup() . "\<Home>"
 " inoremap <expr><End> neocomplcache#close_popup() . "\<End>"
+
+" minibuf configs
+so $VIM\vimfiles\bundle\minibufexpl.vim\plugin\minibufexpl.vim
 
 " file type switch
 	" .vt would be a verilog testbench file
