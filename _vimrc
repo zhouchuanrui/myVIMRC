@@ -17,7 +17,7 @@ Bundle 'taglist.vim'
 Bundle 'scrooloose/nerdtree' 
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'msanders/snipmate.vim'
-Bundle 'minibufexpl.vim'
+"Bundle 'minibufexpl.vim'
 "Bundle 'tomasr/molokai'
 
 " Bundle 'Shougo/neocomplcache.vim' 
@@ -265,6 +265,10 @@ set nrformats-=octal
 nmap <leader>vg :vimgrep 
 nmap <leader>vc :cn<CR>
 
+" buffer switch
+nmap <leader><leader> :bnext<cr>
+nmap <leader>. :bNext<cr>
+
 " Ctags configuration
 " it is nothing complex but a key map
 ""nmap <F9> :!ctags -R *<CR>
@@ -320,7 +324,7 @@ let g:snips_author = 'Mr Zhou'
 " inoremap <expr><End> neocomplcache#close_popup() . "\<End>"
 
 " minibuf configs
-so $VIM\vimfiles\bundle\minibufexpl.vim\plugin\minibufexpl.vim
+"so $VIM\vimfiles\bundle\minibufexpl.vim\plugin\minibufexpl.vim
 
 " file type switch
 	" .vt would be a verilog testbench file
