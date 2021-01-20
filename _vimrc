@@ -125,8 +125,8 @@ endfunction
 colorscheme myscheme 
 set guifont=Consolas:h9 " set the font and font-size
 set gfw=YouYuan:h11 " set Chinese font
-""set number  " show the line number
-set relativenumber	" show the relative line number, a 7.3 new feature
+set number  " show the line number
+"set relativenumber	" show the relative line number, a 7.3 new feature
 "set nohls " set on high-light search
 set shortmess=atI  " set the message mode
 set go= " set no tool-bar, tool-menu or speed-bar
