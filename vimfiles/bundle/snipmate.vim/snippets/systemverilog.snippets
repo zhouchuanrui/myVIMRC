@@ -4,6 +4,7 @@ snippet head
 	//
 	//File: ${1:`expand('%:t')`}
 	//Device: ${2}
+	//Author: zhouchuanrui@foxmail.com
 	//Created: ${3: `strftime("%c")`}
 	//Description: ${4:blablabla}
 	//Revisions: ${5:listed below}
@@ -18,7 +19,7 @@ snippet mod
 	(
 		${2:input}
 	);
-	endmodule: $1
+	endmodule
 # module with parameters
 snippet mp
 	module ${1:name_of_module} 
@@ -29,7 +30,7 @@ snippet mp
 	(
 		${2:input}
 	);
-	endmodule: $1
+	endmodule
 # package
 snippet pk
 	package ${1};
@@ -39,7 +40,7 @@ snippet cl
 	class ${1:foo};
 		function new();
 		endfunction
-	endclass: $1
+	endclass
 # constraint
 snippet cons
 	constraint ${1}{
@@ -62,12 +63,12 @@ snippet fun
 	function ${1:void} ${2:foo} (
 	);
 		${4}
-	endfunction: $2
+	endfunction
 # task
 snippet task
 	task ${1:foo} (
 	);
-	endtask: $1
+	endtask
 # initial block
 snippet ini
 	initial
